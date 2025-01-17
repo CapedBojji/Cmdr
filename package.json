@@ -16,5 +16,6 @@
     "Cmdr",
     "TS"
   ],
-  "main": "TS/init.lua"
+  "main": "TS/init.lua",
+  "types": "TS/index.d.ts"
 }
