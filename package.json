@@ -15,5 +15,6 @@
   "files": [
     "Cmdr",
     "TS"
-  ]
+  ],
+  "main": "TS/init.lua"
 }
