@@ -374,8 +374,8 @@ function Registry:RegisterCommandsIn(container: Instance, filter: ((any) -> bool
 
 	for _, commandScript in pairs(container:GetChildren()) do
 		if commandScript:IsA("ModuleScript") then
-			if not commandScript.Name:find("Server") then
-				local serverCommandScript = container:FindFirstChild(commandScript.Name .. "Server")
+			if not commandScript.Name:find("Server") and not commandScript.Name:find("server") then
+				local serverCommandScript = container:FindFirstChild(commandScript.Name .. "Server") or container:FindFirstChild(commandScript.Name.."server")
 
 				if serverCommandScript then
 					usedServerScripts[serverCommandScript] = true
